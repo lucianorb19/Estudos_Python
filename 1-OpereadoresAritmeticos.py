@@ -24,7 +24,7 @@ ORDEM DE PRESCEDÊNCIA
 """
 
 #------------------------------------------------------------------
-#DESAFIO - ANTECESSOR, SUCESSOR, DOBRO, TRIPLO, RAIZ QUADRADA ")
+print('DESAFIO - ANTECESSOR, SUCESSOR, DOBRO, TRIPLO, RAIZ QUADRADA')
 numero1=float(input("Digite um número: "))
 sucessor1=numero1+1
 antecessor1=numero1-1
@@ -40,7 +40,7 @@ print()
       
 
 #------------------------------------------------------------------
-#DESAFIO - SOMA DE DUAS NOTAS E SUA MÉDIA
+print('DESAFIO - SOMA DE DUAS NOTAS E SUA MÉDIA')
 nota1=float(input("Digite a nota 1 do aluno: "))
 nota2=float(input("Digite a nota 2 do aluno: "))
 media1=(nota1+nota2)/2
@@ -49,7 +49,7 @@ print()
 
 
 #------------------------------------------------------------------
-#DESAFIO - METROS EM CENTÍMETROS E MILÍMETROS")
+print('DESAFIO - METROS EM CENTÍMETROS E MILÍMETROS')
 metros1=float(input("Digite uma distância em metros: "))
 centimetros1=metros1*100
 milimetros=centimetros1*10
@@ -61,7 +61,7 @@ print()
 
 
 #------------------------------------------------------------------
-#DESAFIO TABUADA DE UM NÚMERO INTEIRO
+print('DESAFIO TABUADA DE UM NÚMERO INTEIRO')
 n1=int(input("Digite um número inteiro: "))
 print("Tabuada de {}".format(n1))
 print("{}x0 = {}\n"
@@ -79,7 +79,7 @@ print()
 
                            
 #------------------------------------------------------------------
-#DESAFIO - QUANTOS DÓLARES CONSIGO COMPRAR COM REAIS
+print('DESAFIO - QUANTOS DÓLARES CONSIGO COMPRAR COM REAIS')
 reais=float(input("Quantos reais você tem na carteira? "))
 dolares=reais/5.90
 print("Com {} reais, você consegue comprar {} dólares!".format(reais,dolares))
@@ -87,7 +87,7 @@ print()
 
 
 #------------------------------------------------------------------
-#DESAFIO - CALCULAR ÁREA DA PAREDE E QUANTIDADE DE TINTA")
+print('DESAFIO - CALCULAR ÁREA DA PAREDE E QUANTIDADE DE TINTA")')
 largura=float(input("Qual a largura da parede (em metros)? "))
 altura=float(input("Qual a altura da parede (em metros)? "))
 area_parede=altura*largura
@@ -100,7 +100,7 @@ print()
 
 
 #------------------------------------------------------------------
-#DESAFIO - MOSTRAR PREÇO DO PRODUTO COM 5% DE DESCONTO")
+print('DESAFIO - MOSTRAR PREÇO DO PRODUTO COM 5% DE DESCONTO")')
 preco1=float(input("Digite o preço do produto: "))
 preco2=preco1-(preco1*0.05)#preço atualizado com 5% de desconto
 print("Valor com 5% de desconto: {}".format(preco2))
@@ -108,7 +108,7 @@ print()
 
 
 #------------------------------------------------------------------
-#DESAFIO - AUMENTO DE 15% NO SALÁRIO
+print('DESAFIO - AUMENTO DE 15% NO SALÁRIO')
 salario1=float(input("Qual o salário atual do funcionário? "))
 salario2=salario1+(salario1*0.25)#salário somado de 25%
 print("Salário aumentado em 25%: {}".format(salario2))

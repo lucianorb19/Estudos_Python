@@ -6,7 +6,7 @@ ou
 from + nome biblioteca + import + nome função,nome função,nome função....
 """
 #---------------------------------------------------
-#EXEMPLO
+print('EXEMPLO')
 #import math
 from math import sqrt
 numero=float(input("Digite um número: "))
@@ -17,7 +17,7 @@ print()
 
 
 #---------------------------------------------------
-#DESAFIO - MOSTRAR A PORÇÃO INTEIRA DE UM NÚMERO
+print('MOSTRAR A PORÇÃO INTEIRA DE UM NÚMERO')
 import math
 num=float(input("Digite um número: "))
 num1=math.trunc(num)
@@ -25,7 +25,7 @@ print("A porção inteira de {} é: {}".format(num,num1))
 
 
 #---------------------------------------------------
-#DESAFIO - TEOREMA DE PITÁGORAS
+print('TEOREMA DE PITÁGORAS')
 # o quadrado da hipotenusa é igual a soma do quadrado dos catetos
 #h2 = ad2 + opo2
 #import math
@@ -38,7 +38,7 @@ print("Hipotenusa resultante: {}".format(hipo))
 
 #---------------------------------------------------
 #import math
-#DESAFIO - SENO, COSSENO E TANGENTE DE UM ÂNGULO
+print('SENO, COSSENO E TANGENTE DE UM ÂNGULO')
 angulo1=float(input("Digite o valor do ângulo em graus(de 1 a 179): "))
 #como as funções calculam em radianos, é preciso converter o valor
 #do ângulo de graus para radianos
@@ -53,7 +53,7 @@ print("Cosseno: {}\n"
 
 
 #---------------------------------------------------
-#DESAFIO LER O NOME DE 4 ALUNOS E MOSTRAR UM ALEATORIAMENTE
+print('DESAFIO LER O NOME DE 4 ALUNOS E MOSTRAR UM ALEATORIAMENTE')
 import random
 alunos=["carlos","luciano","diogo","mateus"]
 print("Os alunos são Carlos, Luciano, Digo e Mateus !")
@@ -62,7 +62,7 @@ print("O aluno sorteado foi {}".format(escolhido))
 
 
 #---------------------------------------------------
-#DESAFIO SORTEAR A ORDEM DE APRESENTAÇÃO DOS 4 ALUNOS
+print('DESAFIO SORTEAR A ORDEM DE APRESENTAÇÃO DOS 4 ALUNOS')
 #import random
 alunos=["luciano","mateus","diogo","carlos"]
 print("Os alunos são {}".format(alunos))
