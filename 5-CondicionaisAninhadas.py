@@ -19,14 +19,14 @@ else:
     print("Chegamos no else!")
 """
 
-
+from Pacote1 import verifica
 
 #----------------------------------------------------------
 print("DESAFIO - FINANCIAMENTO IMOBILIÁRIO")
 #valor da mensalidade não pode ser maior que 30% do salário
-valor_casa=float(input("Qual o valor da casa a ser financiada? "))
-salario=float(input("Qual o valor de seu salário? "))
-prazo_anos=int(input("Em quantos anos você pretende pagar a casa? "))
+valor_casa=verifica.verifica_float(input("Qual o valor da casa a ser financiada? "))
+salario=verifica.verifica_float(input("Qual o valor de seu salário? "))
+prazo_anos=verifica.verifica_int(input("Em quantos anos você pretende pagar a casa? "))
 
 mensalidade=valor_casa/(prazo_anos*12)# valor da mensalidade dividindo
                                       #o valor da casa pelo número de meses do prazo de compra
@@ -43,12 +43,12 @@ print()
 
 #----------------------------------------------------------
 print("DESAFIO - CONVERSÃO DE BASE NUMÉRICA")
-numero=int(input("Digite um número inteiro natural: "))
+numero=verifica.verifica_int(input("Digite um número inteiro natural: "))
 print("CONVERSÃO DE DECIMAL PARA:\n"
       "1- Binário\n"
       "2- Octal\n"
       "3- Hexadecimal")
-escolha=int(input("-> "))
+escolha=verifica.verifica_int(input("-> "))
 
 #USANDO A FUNÇÃO bin, oct ou hex, O RESULTADO É UMA STRING
 #CUJOS PRIMEIROS DOIS CARACTÉRES NÃO FAZEM PARTE
@@ -69,8 +69,8 @@ print()
 
 #----------------------------------------------------------
 print("DESAFIO - NÚMERO MAIOR OU MENOR")
-numero1=int(input("Digite um número inteiro qualquer: "))
-numero2=int(input("Digite outro número inteiro qualquer: "))
+numero1=verifica.verifica_int(input("Digite um número inteiro qualquer: "))
+numero2=verifica.verifica_int(input("Digite outro número inteiro qualquer: "))
 maior=menor=0
 
 if numero1>numero2:
@@ -87,9 +87,9 @@ print("DESAFIO - ALISTAMENTO MILITAR")
 import datetime
 a=datetime.datetime.now()
 b=a.date()
-ano_atual=int(b.strftime("%Y")) #isso tudo pra pegar o ano atual
+ano_atual=verifica.verifica_int(b.strftime("%Y")) #isso tudo pra pegar o ano atual
 
-ano_nascimento=int(input("Em qual ano você nasceu? "))
+ano_nascimento=verifica.verifica_int(input("Em qual ano você nasceu? "))
 idade=ano_atual-ano_nascimento #cálculo da idade
 
 diferenca=abs(18-idade)
@@ -107,8 +107,8 @@ print()
 #----------------------------------------------------------
 print("DESAFIO - MÉDIA DE NOTAS - NOTAS DE 0 A 10")
 
-nota1=float(input("Qual foi sua primeira nota? "))
-nota2=float(input("Qual foi sua segunda nota? "))
+nota1=verifica.verifica_float(input("Qual foi sua primeira nota? "))
+nota2=verifica.verifica_float(input("Qual foi sua segunda nota? "))
 media=(nota1+nota2)/2
 print(media)
 
@@ -126,8 +126,8 @@ print("DESAFIO - CATEGORIA DE NATAÇÃO")
 import datetime
 a=datetime.datetime.now()
 b=a.date()
-ano_atual=int(b.strftime("%Y")) #isso tudo pra pegar o ano atual
-ano_nascimento=int(input("Em qual ano você nasceu? "))
+ano_atual=verifica.verifica_int(b.strftime("%Y")) #isso tudo pra pegar o ano atual
+ano_nascimento=verifica.verifica_int(input("Em qual ano você nasceu? "))
 idade=ano_atual-ano_nascimento
 
 if idade<=9:
@@ -150,9 +150,9 @@ print("DESAFIO - ESSAS TRÊS RETAS FORMAM UM TRIÂNGULO ?\n"
 #um de seus lados deve ser maior que o valor absoluto da diferença dos outros dois
 #e menor que a soma dos outros dois
 
-a=float(input("Digite o comprimento da reta1: "))
-b=float(input("Digite o comprimento da reta2: "))
-c=float(input("Digite o comprimento da reta3: "))
+a=verifica.verifica_float(input("Digite o comprimento da reta1: "))
+b=verifica.verifica_float(input("Digite o comprimento da reta2: "))
+c=verifica.verifica_float(input("Digite o comprimento da reta3: "))
 
               #a em relação bc
 if a>abs(b-c):#se a maior que o valor absoluto da diferença dos outros dois
@@ -186,8 +186,8 @@ print()
 
 #----------------------------------------------------------
 print("DESAFIO - IMC")
-altura=float(input("Qual sua altura (m) ?"))
-peso=float(input("Qual seu peso (kg) ?"))
+altura=verifica.verifica_float(input("Qual sua altura (m) ?"))
+peso=verifica.verifica_float(input("Qual seu peso (kg) ?"))
 imc=peso/altura**2#peso / altura ao quadrado
 print(imc)
 
@@ -206,9 +206,9 @@ print()
 
 #----------------------------------------------------------
 print("DESAFIO - CONDIÇÕES DE PAGAMENTO")
-preco_normal=float(input("Qual o preço normal do produto? "))
+preco_normal=verifica.verifica_float(input("Qual o preço normal do produto? "))
 
-op=int(input("Qual vai ser a forma de pagamento?\n"
+op=verifica.verifica_int(input("Qual vai ser a forma de pagamento?\n"
              "1 - À vista em dinheiro (10% de desconto)\n"
              "2 - À vista no cartão (5% de desconto)\n"
              "3 - Até 2x no cartão (preço normal)\n"
@@ -231,7 +231,7 @@ print()
 #----------------------------------------------------------
 print("DESAFIO JOKENPÔ")
 from random import randint
-opP=int(input("Qual sua jogada?\n"
+opP=verifica.verifica_int(input("Qual sua jogada?\n"
       "1-Pedra\n"
       "2-Papel\n"
       "3-Tesoura\n"

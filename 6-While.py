@@ -16,6 +16,7 @@ while op==0:
 print("Sexo: {}".format(sexo))
 """
 
+from Pacote1 import verifica
 
 #----------------------------------------------------
 print("DESAFIO - GERAR NÚMERO ALEATÓRIO ENTRE 0 E 5 "
@@ -26,7 +27,7 @@ numero=randint(0,5)
 
 tentativa=-1
 while tentativa!=numero:#enquanto a  pessoa não digitar um número igual ao gerado aleatoriamente
-    tentativa = int(input("Qual número foi gerado pelo computador?\n->> "))
+    tentativa = verifica.verifica_int(input("Qual número foi gerado pelo computador?\n->> "))
     #print("Número gerado pelo computador: {}".format(numero))
     if numero==tentativa:
         print("Você acertou!")
@@ -37,11 +38,11 @@ print()
 
 #----------------------------------------------------
 print("DESAFIO - MENU DE OPÇÕES PARA OPERAÇÕES")
-valor1=float(input("Digite o primeiro valor: "))
-valor2=float(input("Digite o segundo valor: "))
+valor1=verifica.verifica_float(input("Digite o primeiro valor: "))
+valor2=verifica.verifica_float(input("Digite o segundo valor: "))
 op=-1
 while op!=5:
-    op=int(input("MENU DE OPÇÕES\n"
+    op=verifica.verifica_int(input("MENU DE OPÇÕES\n"
           "[1] - SOMAR\n"
           "[2] - MULTIPLICAR\n"
           "[3] - QUAL MAIOR\n"
@@ -62,8 +63,8 @@ while op!=5:
             maior=valor2
         print("Maior número: {}\n".format(maior))
     elif op==4:
-        valor1=float(input("Digite o novo primeiro valor: "))
-        valor2=float(input("Digite o novo segundo valor: "))
+        valor1=verifica.verifica_float(input("Digite o novo primeiro valor: "))
+        valor2=verifica.verifica_float(input("Digite o novo segundo valor: "))
     #if op!=1 and op!=2 and op!=3 and op!=4 and op!=5:#entrada errado do usuário
     if op not in [1,2,3,4,5]:
         print("Opção insdisponível! Tente novamente\n")
@@ -72,7 +73,7 @@ print()
 
 #----------------------------------------------------
 print("DESAFIO - FATORIAL")
-num=int(input("Digite um número inteiro natural: "))
+num=verifica.verifica_int(input("Digite um número inteiro natural: "))
 
 resultado=1
 contador=num
@@ -89,8 +90,8 @@ print()
 
 #----------------------------------------------------
 print("DESAFIO - PROGRESSÃO ARITMÉTICA COM WHILE")
-numero=int(input("Qual o primeiro termo da PA: "))
-razao=int(input("Qual a razao da PA: "))
+numero=verifica.verifica_int(input("Qual o primeiro termo da PA: "))
+razao=verifica.verifica_int(input("Qual a razao da PA: "))
 
 print("Mostrando os primeiros 10 números da PA:")
 contador=1
@@ -103,7 +104,7 @@ ultimo=numero #salvando o último termo da PA
 
 op=-1
 while op!=0:
-    op=repet=int(input("Quantos termos a mais para a PA? [0 PARA SAIR]"))
+    op=repet=verifica.verifica_int(input("Quantos termos a mais para a PA? [0 PARA SAIR]"))
     contador = 1
     while contador<=repet:
         print(ultimo)
@@ -114,7 +115,7 @@ print()
 
 #----------------------------------------------------
 print("DESAFIO - SEQUENCIA DE FIBONACCI")
-digitos=int(input("Quantos números da sequência de fibonacci serão mostrados na tela? "))
+digitos=verifica.verifica_int(input("Quantos números da sequência de fibonacci serão mostrados na tela? "))
 
 contador=0
 ultimo=1
@@ -133,7 +134,7 @@ print()
 print("DESAFIO - LER NÚMERO E SÓ PARAR AO LER 999")
 numero=soma=contador=0
 while numero!=999:
-    numero=int(input("Digite um número qualquer: "))
+    numero=verifica.verifica_int(input("Digite um número qualquer: "))
     if numero!=999:
         soma+=numero
         contador+=1
@@ -149,7 +150,7 @@ maior=0
 menor=1000
 
 while op!=1:
-    numero=int(input("Digite um número inteiro qualquer: "))
+    numero=verifica.verifica_int(input("Digite um número inteiro qualquer: "))
     soma+=numero
     contador+=1
     if numero>maior:
@@ -172,7 +173,7 @@ print()
 print("DESAFIO - TABUADA DE VÁRIOS NÚMEROS")
 numero=0
 while numero>=0:
-    numero = int(input("Tabuada de qual número? (-1 para sair)\n--> "))
+    numero = verifica.verifica_int(input("Tabuada de qual número? (-1 para sair)\n--> "))
     if numero>=0:
         for cont in range(1,11):
             print("{} x {} = {}".format(numero,cont,(cont*numero)))
@@ -202,25 +203,25 @@ while vitoria==True:#ENQUANTO O JOGADOR GANHAR
         op_computador="IMPAR"
         op_jogador="PAR"
         #LAÇO PARA GARANTIR UMA ENTRADA INTEIRA PAR
-        numero_pessoa = int(input("Digite um número inteiro par: "))
+        numero_pessoa = verifica.verifica_int(input("Digite um número inteiro par: "))
         while numero_pessoa%2!=0:#enquanto a pessoa não digitar um número par
-            numero_pessoa = int(input("Você não digitou um número par.\nDigite novamente: "))
+            numero_pessoa = verifica.verifica_int(input("Você não digitou um número par.\nDigite novamente: "))
 
     #CASO O JOGADOR JOGUE ÍMPAR
     if op_jogador=="IMPAR" or op_jogador=="ÍMPAR" or op_jogador=="I":
         op_computador="PAR"
         op_jogador="IMPAR"
         #LAÇO PARA GARANTIR UMA ENTRADA INTEIRA ÍMPAR
-        numero_pessoa = int(input("Digite um número inteiro ímpar: "))
+        numero_pessoa = verifica.verifica_int(input("Digite um número inteiro ímpar: "))
         while numero_pessoa % 2 == 0:  # enquanto a pessoa não digitar um número ímpar
-            numero_pessoa = int(input("Você não digitou um número ímpar.\nDigite novamente: "))
+            numero_pessoa = verifica.verifica_int(input("Você não digitou um número ímpar.\nDigite novamente: "))
 
 
 
     print("Computador jogou.... ",end="")
     time.sleep(1)
     #COMPUTADOR GERA UM NÚMERO INTEIRO ALEATÓRIO ENTRE 0 E 1000
-    numero_computador=int(random.randint(0,1000))
+    numero_computador=verifica.verifica_int(random.randint(0,1000))
     print(numero_computador)
     soma=numero_pessoa+numero_computador
     print("Somando os valores temos -> {}".format(soma),end=" ")
@@ -255,7 +256,7 @@ maior_18=homens=mulheres_menos20=0
 #ENQUANTO A PESSOA ESCOLHER CONTINUAR
 while continuar==True:
     #ENTRADA DA IDADE
-    idade=int(input("Idade da pessoa {}: ".format(cont)))
+    idade=verifica.verifica_int(input("Idade da pessoa {}: ".format(cont)))
 
     #ENTRADA DO SEXO COM VERIFICAÇÃO
     sexo=input("Sexo da pessoa {} [F/M]: ".format(cont))
@@ -307,7 +308,7 @@ nome_mais_barato=""
 
 while continuar==True:
     nome=input("Nome do {}º produto: ".format(cont))
-    valor=float(input("Preço do {}º produto: ".format(cont)))
+    valor=verifica.verifica_float(input("Preço do {}º produto: ".format(cont)))
     #TOTAL DA COMPRA INCREMENTADO PELO VALOR DO ITEM
     total_compra+=valor
     #INCREMENTO CONTADOR DE PRODUTOS MAIS CAROS QUE 1000
@@ -338,7 +339,7 @@ print()
 
 #---------------------------------------------
 print("DESAFIO - CAIXA ELETRÔNIOCO EMITINDO CÉDULAS")
-saque=int(input("Qual o valor do saque? "))
+saque=verifica.verifica_int(input("Qual o valor do saque? "))
 #INICIALIZAÇÃO DAS VARIÁVEIS
 cedulas_100=cedulas_50=cedulas_20=cedulas_10=cedulas_1=0
 
@@ -347,21 +348,21 @@ while saque!=0:
     #SE O VALOR FOR DIVISÍVEL POR 100
     if (saque/100)>=1:
         #NÚMERO DE CÉDULAS DE 100 É O VALOR INTEIRO DA DIVISÃO DO SAQUE POR 100
-        cedulas_100 = int(saque / 100)
+        cedulas_100 = verifica.verifica_int(saque / 100)
         #VARIÁVEL SAQUE RECEBE O RESTO DA DIVISÃO POR 100
         saque = saque % 100
         print("Cédulas R$100: {}".format(cedulas_100))
     #PARA AS DEMAIS CÉDULAS, DADO O NOVO VALOR DA VARIÁVEL SAQUE, SE REPETE O PROCEDIMENTO
     elif (saque/50)>=1:
-        cedulas_50 = int(saque / 50)
+        cedulas_50 = verifica.verifica_int(saque / 50)
         saque = saque % 50
         print("Cédulas R$50: {}".format(cedulas_50))
     elif (saque/20)>=1:
-        cedulas_20 = int(saque / 20)
+        cedulas_20 = verifica.verifica_int(saque / 20)
         saque = saque % 20
         print("Cédulas R$20: {}".format(cedulas_20))
     elif (saque/10)>=1:
-        cedulas_10 = int(saque / 10)
+        cedulas_10 = verifica.verifica_int(saque / 10)
         saque = saque % 10
         print("Cédulas R$10: {}".format(cedulas_10))
     else:
