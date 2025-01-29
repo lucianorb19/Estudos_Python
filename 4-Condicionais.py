@@ -7,6 +7,8 @@ else:
     codigo
 """
 
+from Pacote1 import verifica
+
 #---------------------------------------------------
 print("DESAFIO - GERAR NÚMERO ALEATÓRIO ENTRE 0 E 5 "
       "PARA O USUÁRIO ACERTAR")
@@ -14,7 +16,7 @@ from random import randint
 from random import random
 print("Gerando número inteiro aleatório entre 0 e 5 !")
 numero=randint(0,5)
-tentativa = int(input("Qual número foi gerado pelo computador? "))
+tentativa = verifica.verifica_int(input("Qual número foi gerado pelo computador? "))
 print("Número gerado pelo computador: {}".format(numero))
 if numero==tentativa:
     print("Você acertou !")
@@ -25,7 +27,7 @@ print()
 
 #---------------------------------------------------
 print("DESAFIO - MULTA DE TRÂNSITO ACIMA DE 80KM/H")
-velocidade=float(input("Qual a velocidade do carro na via? "))
+velocidade=verifica.verifica_float(input("Qual a velocidade do carro na via? "))
 if velocidade>80:
     print("Velocidade acima da permitida! ")
     aux1=velocidade-80 #cálculo de quantos km estava acima de 80
@@ -39,7 +41,7 @@ print()
 
 #---------------------------------------------------
 print("DESAFIO - NÚMERO PAR OU ÍMPAR")
-numero=int(input("Digite um número inteiro: "))
+numero=verifica.verifica_int(input("Digite um número inteiro: "))
 if (numero%2)==0:
     print("Número {} é par! ".format(numero))
 else:
@@ -49,7 +51,7 @@ print()
 
 #---------------------------------------------------
 print("Desafio - PREÇO DA PASSAGEM")
-distancia=float(input("Qual a distância da viagem em km: "))
+distancia=verifica.verifica_float(input("Qual a distância da viagem em km: "))
 if distancia<=200:#caso a viagem seja de até 200km
     preco=0.5*distancia#cada km custa 0,5 reais
     print("Cada km da viagem custa R$0,5")
@@ -65,7 +67,7 @@ print()
 print("DESAFIO - ANO BISSEXTO")
 #ano múltiplo de 4
 #que não seja múltiplo de 100 (exceto os múltiplos de 400)
-ano=int(input("Qual ano você quer verificar se foi/é/será bissexto? "))
+ano=verifica.verifica_int(input("Qual ano você quer verificar se foi/é/será bissexto? "))
 if ano%4==0:#múltiplo de 4
     print("Múltiplo de 4")
     if ano%100==0:#múltiplo de 4 e 100
@@ -90,9 +92,9 @@ print("DESAFIO - QUAL O MAIOR E O MENOR NÚMERO")
 maior=0
 menor=0
 
-n1=int(input("Digite o primeiro número: "))
-n2=int(input("Digite o segundo número: "))
-n3=int(input("Digite o terceiro número: "))
+n1=verifica.verifica_int(input("Digite o primeiro número: "))
+n2=verifica.verifica_int(input("Digite o segundo número: "))
+n3=verifica.verifica_int(input("Digite o terceiro número: "))
 
 if n1>n2:
     print("N1 MAIOR QUE N2")
@@ -151,7 +153,7 @@ print("Maior: {}\n"
 
 #---------------------------------------------------
 print("DESAFIO - AUMENTO SALARIOS POR FAIXA")
-salario=float(input("Qual valor do seu salário? "))
+salario=verifica.verifica_float(input("Qual valor do seu salário? "))
 
 if salario>1250:
     salario=salario+(salario*0.1)#salario aumentado 10%
@@ -169,9 +171,9 @@ print("DESAFIO - ESSAS TRÊS RETAS FORMAM UM TRIÂNGULO ?")
 #um de seus lados deve ser maior que o valor absoluto da diferença dos outros dois
 #e menor que a soma dos outros dois
 
-a=float(input("Digite o comprimento da reta1: "))
-b=float(input("Digite o comprimento da reta2: "))
-c=float(input("Digite o comprimento da reta3: "))
+a=verifica.verifica_int(input("Digite o comprimento da reta1: "))
+b=verifica.verifica_int(input("Digite o comprimento da reta2: "))
+c=verifica.verifica_int(input("Digite o comprimento da reta3: "))
 
               #a em relação bc
 if a>abs(b-c):#se a maior que o valor absoluto da diferença dos outros dois
