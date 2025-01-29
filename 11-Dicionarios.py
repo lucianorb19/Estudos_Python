@@ -43,7 +43,7 @@ estado["Sigla"]="MG"
 brasil.append(estado.copy())
 """
 
-
+from Pacote1 import verifica
 
 
 #---------------------------------------------------------
@@ -51,7 +51,7 @@ print("DESAFIO - NOME NOTA E SITUAÇÃO DO ALUNO")
 aluno=dict()
 
 aluno["nome"]=str(input("Nome do aluno: "))
-aluno["media"]=float(input(f"Media de {aluno["nome"]}: "))
+aluno["media"]=verifica.verifica_float(input(f"Media de {aluno["nome"]}: "))
 if aluno["media"]<7:
     aluno["situacao_aluno"]="Reprovado"
 else:
@@ -112,7 +112,7 @@ while sexo not in ["F","MULHER","FEMININO","M","HOMEM","MASCULINO"]:
     sexo.upper()
 dados_pessoa["Sexo"]=sexo
 
-dados_pessoa["Ano de Nascimento"]=int(input("Ano de nascimento: "))
+dados_pessoa["Ano de Nascimento"]=verifica.verifica_int(input("Ano de nascimento: "))
 #DEFININDO IDADE PELO ANO DE NASCIMENTO
 #a=datetime.datetime.now()
 #b=a.date()
@@ -123,16 +123,16 @@ dados_pessoa["Idade"]=idade
 
 #SE CARTEIRA DE TRABALHO FOR DIFERENTE DE ZERO, DICIONÁRIO RECEBE TAMBÉM ANO DE CONTRATAÇÃO
 #E SALÁRIO E COM QUANTOS ANOS A PESSOA IRÁ SE APOSENTAR
-carteira_detrabalho=int(input("Possui carteira de trabalho assinada: [0-NAO/1-SIM]\n->> "))
+carteira_detrabalho=verifica.verifica_int(input("Possui carteira de trabalho assinada: [0-NAO/1-SIM]\n->> "))
 while carteira_detrabalho not in [0,1]:
     print("Entrada inválida. Tente novamente!")
-    carteira_detrabalho = int(input("Possui carteira de trabalho assinada: [0-NAO/1-SIM]\n->>  "))
+    carteira_detrabalho = verifica.verifica_int(input("Possui carteira de trabalho assinada: [0-NAO/1-SIM]\n->>  "))
 dados_pessoa["Carteira de Trabalho"]=carteira_detrabalho
 
 #CASO TENHA CARTEIRA DE TRABALHO
 if carteira_detrabalho==1:
-    dados_pessoa["Ano de contratação"]=int(input("Ano de contratação: "))
-    dados_pessoa["Salário"]=float(input("Salário: "))
+    dados_pessoa["Ano de contratação"]=verifica.verifica_int(input("Ano de contratação: "))
+    dados_pessoa["Salário"]=verifica.verifica_float(input("Salário: "))
     print()#2
     #DEFININDO CONDIÇÕES PARA APOSENTADORIA
     #CASO SEJA MULHER - 60 ANOS OU 30 DE CONTRIBUIÇÃO
@@ -184,11 +184,11 @@ total_gols=0
 
 #ENTRADA DE NOME E NÚMERO DE PARTIDAS
 jogador["Nome"]=str(input("Nome do jogador: "))
-n_partidas=int(input(f"Quantas partidas {jogador["Nome"]} jogou? "))
+n_partidas=verifica.verifica_int(input(f"Quantas partidas {jogador["Nome"]} jogou? "))
 
 #INFORMAÇÃO DE NÚMERO DE GOLS DE CADA PARTIDA SALVA NUMA LISTA, QUE É ADICIONADA AO DICIONÁRIO
 for cont in range(0,n_partidas):
-    n_gols=int(input(f"Quantos gols na partida {cont+1}: "))
+    n_gols=verifica.verifica_int(input(f"Quantos gols na partida {cont+1}: "))
     gols.append(n_gols)
 jogador["Gols"]=gols[:]
 
@@ -224,7 +224,7 @@ while continuar:
         sexo = str(input("Sexo: "))
         sexo=sexo.upper()
     pessoa["Sexo"]=sexo
-    pessoa["Idade"]=int(input("Idade: "))
+    pessoa["Idade"]=verifica.verifica_int(input("Idade: "))
 
     #ATRIBUIÇÃO DO DICIONÁRIO À LISTA
     pessoas.append(pessoa.copy())
@@ -247,7 +247,7 @@ n_pessoas=len(pessoas)
 #MÉDIA DE IDADE DO GRUPO
 for pessoa in pessoas:
     soma_idades+=pessoa["Idade"]
-media_idade=int(soma_idades/n_pessoas)
+media_idade=verifica.verifica_int(soma_idades/n_pessoas)
 
 #LISTA COM TODAS AS MULHERES
 for pos,pessoa in enumerate(pessoas):#PARA CADA ITEM DA LISTA PESSOAS, OU SEJA, CADA DICIONÁRIO
@@ -293,12 +293,12 @@ continuar=True
 while continuar==True:
     #ENTRADA DE NOME E NÚMERO DE PARTIDAS
     jogador["Nome"]=str(input("Nome do jogador: "))
-    n_partidas=int(input(f"Quantas partidas {jogador["Nome"]} jogou? "))
+    n_partidas=verifica.verifica_int(input(f"Quantas partidas {jogador["Nome"]} jogou? "))
 
     #INFORMAÇÃO DE NÚMERO DE GOLS DE CADA PARTIDA SALVA NUMA LISTA, QUE É ADICIONADA AO DICIONÁRIO
     total_gols = 0
     for cont in range(0,n_partidas):
-        n_gols=int(input(f"Quantos gols na partida {cont+1}: "))
+        n_gols=verifica.verifica_int(input(f"Quantos gols na partida {cont+1}: "))
         gols.append(n_gols)
     jogador["Gols"]=gols[:]
 
@@ -344,7 +344,7 @@ for pos,valores in enumerate(jogadores):
     print()
 
 while True:#LAÇO INFINITO
-    escolha=int(input("Mostrar dados de qual jogador: (999 - SAIR)\n -->"))
+    escolha=verifica.verifica_int(input("Mostrar dados de qual jogador: (999 - SAIR)\n -->"))
 
     if escolha>=len(jogadores):#CASO A ESCOLHA SEJA UM COD ACIMA DA LISTA CADASTRADA, ERRO
         print("Erro! Jogador não cadastrado")

@@ -56,6 +56,7 @@ total=soma(4,9,2)
 print(total)
 """
 
+from Pacote1 import verifica
 
 from datetime import datetime
 def voto(ano_nascimento1):
@@ -161,7 +162,7 @@ print("DESAFIO - VOTO NEGADO, OPCIONAL OU OBRIGATÓRIO")
 #opcional 16,17,>=70
 #obrigatório >=18 e <=69
 
-ano_nascimento=int(input("Qual seu ano de nascimento? "))
+ano_nascimento=verifica.verifica_int(input("Qual seu ano de nascimento? "))
 status=voto(ano_nascimento)
 print(status)
 print()
@@ -171,7 +172,7 @@ print()
 print("DESAFIO - FATORIAL")
 show=False
 #ENTRADA DO USUÁRIO
-numero=int(input("Número para cálculo do fatorial: "))
+numero=verifica.verifica_int(input("Número para cálculo do fatorial: "))
 
 #OPÇÃO DE MOSTRAR O CÁLCULO OU NÃO
 op=str(input("Mostrar cálculo na tela [S/N]?"))
@@ -196,13 +197,13 @@ nome=str(input("Nome do jogador: "))
 #VALOR DE GOLS É str PQ O PYTHON NÃO DEIXA RECEBER ENTRADA DE int VAZIA
 gols=str(input("Nº de gols marcados: "))
 if gols.isnumeric():#SE O VALOR DIGITADO PUDER SER CONVERTIDO PRA NUMÉRICO
-    gols=int(gols)
+    gols=verifica.verifica_int(gols)
 else:#caso seja qualquer entrada não numérica, gols vira 0
     while True:
         gols=str(input("Número de gols não é um número inteiro."
                        "Digite novamente!\n-->"))
         if gols.isnumeric():  # SE O VALOR DIGITADO PUDER SER CONVERTIDO PRA NUMÉRICO
-            gols = int(gols)
+            gols = verifica.verifica_int(gols)
             break
 
 if nome.strip()=="":#CASO O NOME, APÓS RETIRAR OS ESPAÇOS VAZIOS ANTES E DPOIS, SEJA VAZIO

@@ -14,6 +14,8 @@ galera=[["Luciano",27], ["Cleber",30], ["Giovana",18], ["Gustavo",14]]
 teste.clear()
 """
 
+from Pacote1 import verifica
+
 #---------------------------------------
 print("DESAFIO - NOME E PESO")
 pessoas=[]
@@ -25,7 +27,7 @@ contador_pessoas=0
 
 while continuar:
     pessoa.append(str(input("Nome: ")))
-    pessoa.append(float(input("Peso: ")))
+    pessoa.append(verifica.verifica_float(input("Peso: ")))
     pessoas.append(pessoa[:])#CÓPIA DE PESSOA ADICIONADA A PESSOAS
     contador_pessoas+=1
     pessoa.clear()#LIMPA PESSOA
@@ -71,7 +73,7 @@ print("DESAFIO - LISTA COMPOSTA PARES E ÍMPARES")
 numeros=[[],[]]
 
 for cont in range(1,8):#7 ENTRADAS DO USUÁRIO
-    numero=int(input("Digite um número inteiro: "))
+    numero=verifica.verifica_int(input("Digite um número inteiro: "))
     if numero%2==0:#SE PAR, SALVO NA POS 0
         numeros[0].append(numero)
     else:#SE ÍMPAR, SALVO NA POS 1
@@ -94,7 +96,7 @@ soma_pares=soma_coluna3=soma_linha2=0
 
 for c in range(0,3):
     for l in range(0,3):
-        valor=int(input(f"Digite o valor para [{c}] [{l}]: "))
+        valor=verifica.verifica_int(input(f"Digite o valor para [{c}] [{l}]: "))
         linha.append(valor)#DENTRO DO LAÇO, SALVO 3 VALORES PARA A LISTA LINHA
         #SOMANDO VALORES PARES
         if valor%2==0:
@@ -131,7 +133,7 @@ from random import sample #BIBLIOTECA Q GERA LISTA DE NÚMEROS SEM REPETIÇÕES
 import time
 palpites=[]
 
-numero_jogos=int(input("Quantos jogos para gerar palpites: [Insira número]\n->> "))
+numero_jogos=verifica.verifica_int(input("Quantos jogos para gerar palpites: [Insira número]\n->> "))
 for jogos in range(0,numero_jogos):#PARA CADA UM DOS JOGOS
     x=sample(range(1,61),6)#LISTA DE 6 NÚMEROS NÃO REPETIDOS ENTRE 1 E 60
     palpites.append(x[:])#ADICIONO O JOGO A LISTA DE PALPITES
@@ -154,8 +156,8 @@ mostrar=True
 
 while continuar:
     nome=str(input("Nome do aluno: "))
-    nota1=float(input("Nota 1: [de 0 a 10]\n->> "))
-    nota2=float(input("Nota 2: [de 0 a 10]\n->> "))
+    nota1=verifica.verifica_float(input("Nota 1: [de 0 a 10]\n->> "))
+    nota2=verifica.verifica_float(input("Nota 2: [de 0 a 10]\n->> "))
     #ADICIONANDO NOTAS À LISTA NOTAS, COM A MEDIA
     notas.append(nota1)
     notas.append(nota2)
@@ -191,7 +193,7 @@ for pos1,aluno in enumerate(sala):#PARA CADA ITEM DA SALA
     print("--------------------")
 
 while mostrar:#ENQUANTO A PESSOA QUISER CONTINUAR MOSTRANDO NOTAS INDIVIDUAIS
-    escolha=int(input("Mostrar notas de qual aluno? [Usar ID Alno]\n->> "))
+    escolha=verifica.verifica_int(input("Mostrar notas de qual aluno? [Usar ID Alno]\n->> "))
 
     for pos3,aluno in enumerate(sala):
         if escolha==pos3+1:#PARA O ALUNO ESCOLHIDO PELO ID

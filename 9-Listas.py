@@ -39,6 +39,8 @@ a=[1,2,3]
 b=a[:] #b recebe uma cópia dos elementos de a
 """
 
+from Pacote1 import verifica
+
 #------------------------------------
 print("DESAFIO - 5 VALORES NA LISTA")
 #INICIALIZAÇÃO DAS VARIÁVEIS
@@ -51,7 +53,7 @@ lista_pos_menores=[]
 
 #LAÇO PARA INSERÇÃO DOS DADOS
 for cont in range(0,5):
-    valor=int(input(f"Digite o {cont+1}º valor: "))
+    valor=verifica.verifica_int(input(f"Digite o {cont+1}º valor: "))
     numeros.append(valor)#VALOR ADICIONADO À LISTA
     #VERIFICAÇÃO DO MAIOR E MENOR
     if valor>maior:
@@ -95,7 +97,7 @@ valores=[]
 
 #ENQUANTO O USUÁRIO OPTAR POR CONTINUAR
 while continuar:
-    valor=int(input("Digite um número para a lista: "))
+    valor=verifica.verifica_int(input("Digite um número para a lista: "))
     if valor not in valores:#CASO O VALOR JÁ NÃO ESTEJA NA LISTA
         valores.append(valor)
     else:
@@ -130,7 +132,7 @@ maior=0
 menor=1000
 
 for count in range(0,5):
-    numero=int(input(f"Digite o {count+1}º valor: "))
+    numero=verifica.verifica_int(input(f"Digite o {count+1}º valor: "))
     #DEFINIÇÃO DO VALOR MAIOR E DO MENOR
     if numero<=menor:
         menor=numero
@@ -216,7 +218,7 @@ posicoes_5=[]
 #ENQUANTO O USUÁRIO OPTAR POR CONTINUAR
 while continuar:
     #ADICIONANDO NA LISTA E ORDENANDO
-    numero=int(input("Digite um número inteiro para inserir na lista: "))
+    numero=verifica.verifica_int(input("Digite um número inteiro para inserir na lista: "))
     numeros.append(numero)
     numeros.sort()
 
@@ -261,7 +263,7 @@ impares=[]
 continuar=True
 
 while continuar:
-    numero=int(input("Digite um número inteiro para a lista: "))
+    numero=verifica.verifica_int(input("Digite um número inteiro para a lista: "))
     numeros.append(numero)
 
     # OPÇÃO AO USUÁRIO DE CONTINUAR OU NÃO

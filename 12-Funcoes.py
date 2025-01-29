@@ -41,6 +41,7 @@ def dobra(lista):
 valores=[2, 4, 5, 6, 2, 1]
 dobra(valores)
 """
+from Pacote1 import verifica
 
 #CONSTRUÇÃO DAS FUNÇÕES
 import time
@@ -119,8 +120,8 @@ def soma_pares(lista):
 #CÓDIGO PRINCIPAL
 #-------------------------------------------------------
 print("DESAFIO -ÁREA DO TERRENO")
-a1=float(input("Qual a largura do terreno em metros? "))
-b1=float(input("E o comprimento em metros? "))
+a1=verifica.verifica_float(input("Qual a largura do terreno em metros? "))
+b1=verifica.verifica_float(input("E o comprimento em metros? "))
 f_area(a1, b1)
 print()
 
@@ -140,9 +141,9 @@ print("DESAFIO - CONTADOR COM INÍCIO FIM E PASSO")
 #contador(10,0,-2)
 #3º caso
 print("Agora é sua vez! ")
-a1=int(input("Início: "))
-b1=int(input("Fim: "))
-c1=int(input("Passo: "))
+a1=verifica.verifica_int(input("Início: "))
+b1=verifica.verifica_int(input("Fim: "))
+c1=verifica.verifica_int(input("Passo: "))
 contador(a1, b1, c1)
 print()
 
@@ -152,7 +153,7 @@ print("DESAFIO - MAIOR NÚMERO")
 continuar=True
 lista=[]#LISTA A SER PASSADA COMO PARÂMETRO PARA A FUNÇÃO
 while continuar:
-    num=float(input("Digite um número para ser avaliado: "))
+    num=verifica.verifica_float(input("Digite um número para ser avaliado: "))
     lista.append(num) #NÚMERO ADICIONADO À LISTA
     #OPÇÃO AO USUÁRIO DE CONTINUAR OU NÃO
     op=input("Deseja digitar outro número? [S/N]")

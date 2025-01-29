@@ -37,6 +37,7 @@ print(a.index(3,x))
 del(a) - apaga todos os dados da tupla a
 """
 
+from Pacote1 import verifica
 
 #-----------------------------------------------
 print("DESAFIO - MOSTRAR VALORES POR EXTENSO")
@@ -45,11 +46,11 @@ numeros=("zero","um","dois","três","quatro","cinco","seis","sete","oito","nove"
          ,"onze","doze","treze","quatorze","quinze","dezesseis","dezessete","dezoito",
          "dezenove","vinte")
 
-escolha=int(input("Digite um valor entre 0 e 20: "))
+escolha=verifica.verifica_int(input("Digite um valor entre 0 e 20: "))
 #ENQUANTO O NÚMERO DIGITADO NÃO FOR UM VALOR ENTRE 0 E 20, REPETE
 while escolha<0 or escolha >20:
     print("Entrada inválida, tente novamente!")
-    escolha = int(input("Digite um valor entre 0 e 20: "))
+    escolha = verifica.verifica_int(input("Digite um valor entre 0 e 20: "))
 #MOSTRA O NÚMERO ESCOLHIDO POR EXTENSO
 print("Você digitou o número {}".format(numeros[escolha]))
 print()
@@ -125,7 +126,7 @@ valores=[] #LISTA PARA OS VALORES, QUE DEPOIS VIRA TUPLA
 pares=[]
 
 for cont in range(1,5):
-    x=int(input("Digite o {}ºvalor: ".format(cont)))
+    x=verifica.verifica_int(input("Digite o {}ºvalor: ".format(cont)))
     valores.append(x)#VALOR ADICIONADO À LISTA
     #COPIANDO OS VALORES PARES PARA OUTRA LISTA
     if x%2==0:
