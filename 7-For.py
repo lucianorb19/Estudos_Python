@@ -8,6 +8,7 @@ for c in range(0,10,2) - Passo 2 ao invés de 1
 for c in range(10,0,-1) - Iteração regressiva. Passo -1
 """
 
+from Pacote1 import verifica
 
 #------------------------------------
 print("DESAFIO CONTAGEM REGRESSIVA")
@@ -40,7 +41,7 @@ print()
 
 #------------------------------------
 print("DESAFIO TABUADA COM LAÇO FOR")
-numero=int(input("Digite um número inteiro: "))
+numero=verifica.verifica_int(input("Digite um número inteiro: "))
 for cont in range(0,11):
     a=cont*numero
     print("{} x {} = {}".format(numero,cont,a))
@@ -52,7 +53,7 @@ print("DESAFIO - SOMAR APENAS NÚMERO PARES")
 
 soma=0
 for cont in range(1,7):
-    a=int(input("Digite o {}º número: ".format(cont)))
+    a=verifica.verifica_int(input("Digite o {}º número: ".format(cont)))
     if a%2==0:#SE NÚMERO FOR PAR
         soma+=a#SOMATÓRIO DOS NÚMEROS PARES
         print("{} é par!".format(a))
@@ -66,8 +67,8 @@ print()
 
 #------------------------------------
 print("DESAFIO - PROGRESSÃO ARITMÉTICA")
-numero_atual=int(input("Qual o primeiro termo da PA: "))
-razao=int(input("Qual a razao da PA: "))
+numero_atual=verifica.verifica_int(input("Qual o primeiro termo da PA: "))
+razao=verifica.verifica_int(input("Qual a razao da PA: "))
 
 for cont in range(1,11):
     print(numero_atual)
@@ -78,7 +79,7 @@ print()
 #------------------------------------
 print("DESAFIO - NÚMERO PRIMO")
 #divisível somente por ele mesmo e por um
-numero=int(input("Digite um número inteiro: "))
+numero=verifica.verifica_int(input("Digite um número inteiro: "))
 for cont in range(2,numero):#PERCORRENDO TODOS OS NÚMEROS ENTRE 2 E O NÚMERO AVALIADO (-1)
     resto=numero%cont
     if resto==0:#se número for divisível por qualquer outro que não seja 1 ou ele mesmo
@@ -119,11 +120,11 @@ print("DESAFIO - ANO DE NASCIMENTO DE 7 PESSOAS")
 import datetime
 a=datetime.datetime.now()
 b=a.date()
-ano_atual=int(b.strftime("%Y")) #isso tudo pra pegar o ano atual
+ano_atual=verifica.verifica_int(b.strftime("%Y")) #isso tudo pra pegar o ano atual
 
 maiore_idade=menor_idade=0
 for cont in range(1,8):#SETE REPETIÇÕES
-    ano=int(input("Digite o ano de nascimento da {}ª pessoa: ".format(cont)))
+    ano=verifica.verifica_int(input("Digite o ano de nascimento da {}ª pessoa: ".format(cont)))
     if ano_atual-ano>=18:
         maiore_idade+=1
     else:
@@ -140,7 +141,7 @@ maior=0#qualquer peso é maior que 0
 menor=1000 #qualuqer peso humano é menor que 1000
 
 for count in range(1,6):
-    peso=float(input("Qual o peso da {}ª pessoa? ".format(count)))
+    peso=verifica.verifica_float(input("Qual o peso da {}ª pessoa? ".format(count)))
     if peso>maior:
         maior=peso
     if peso<menor:
@@ -160,7 +161,7 @@ mulheres_menosDe20=0
 
 for count in range(1,numero_pessoas+1):
     nome=input("Nome da {}ª pessoas: ".format(count))
-    idade = int(input("Idade da {}ª pessoas: ".format(count)))
+    idade = verifica.verifica_int(input("Idade da {}ª pessoas: ".format(count)))
     sexo = input("Sexo da {}ª pessoas(M/F) : ".format(count))
     sexo=sexo.upper()
     soma_idade+=idade#incrementando o somatório da idade
