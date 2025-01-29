@@ -19,13 +19,7 @@ def verifica_float(numero):
         try:#TENTA CONVERTER PARA FLOAT
             numero=float(numero)
         except:#SE NÃO CONSEGUIR, RECEBE OUTRA ENTRADA
-            numero=input("Número não é float. Tente novamente.\n--> ")
+            numero=input("Número não é Real. Tente novamente.\n--> ")
         else:#CASO A CONVERSÃO SEJA POSSÍVEL
             return numero
             break#FIM DO LAÇO
-
-
-        
-
-a=verifica_float(input("Digite um número real: "))
-print(a)
