@@ -15,9 +15,11 @@ x.islower - Se há somente letras minúsculas
 dentres outros....
 """
 
+from Pacote1 import verifica
+
 
 #CASOS DE USO DO PRINT
-nome=input("Qual seu nome? ")
+nome=input("Qual seu nome?   ")
 print("Seu nome é {}".format(nome)) #- Caso típico
 print("Seu nome é {:10}".format(nome)) #- Mostra a variável limitada a 10 espaços
 print("Seu nome é {:>10}".format(nome))#- Caso anterior, mas alinhado à direita
@@ -28,8 +30,8 @@ print()
 
 #------------------------------------------
 print("DESAFIO - SOMA DE DOIS NÚMEROS")
-n1=int(input('Digite o primeiro número: '))
-n2=int(input('Digite o segundo número: '))
+n1=verifica.verifica_float(input('Digite o primeiro número: '))
+n2=verifica.verifica_float(input('Digite o segundo número: '))
 print('Tipo da variável n1:',type(n1))
 print('Tipo da variável n2:',type(n2))
 print('')
