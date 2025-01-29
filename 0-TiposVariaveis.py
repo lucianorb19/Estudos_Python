@@ -19,7 +19,7 @@ from Pacote1 import verifica
 
 
 #CASOS DE USO DO PRINT
-nome=input("Qual seu nome? ")
+nome=input("Qual seu nome?   ")
 print("Seu nome é {}".format(nome)) #- Caso típico
 print("Seu nome é {:10}".format(nome)) #- Mostra a variável limitada a 10 espaços
 print("Seu nome é {:>10}".format(nome))#- Caso anterior, mas alinhado à direita
