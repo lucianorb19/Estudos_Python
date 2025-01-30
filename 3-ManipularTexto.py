@@ -1,8 +1,21 @@
 """
 MANIPULAÇÃO DE STRINGS
 frase='curso em video'
-c u r s o   e m   v  i  d   e o
-0 1 2 3 4 5 6 7 8 9 10 11  12 13
+
+c   0  -1
+u   1  -2
+r   2  -3
+s   3  -4
+o   4  -5
+    5  -6
+e   6  -7
+m   7  -8
+    8  -9
+v   9  -10
+i   10 -11
+d   11 -12
+e   12 -13
+o   13 -14
 
 #FATIAMENTO
 frase='Curso em Vídeo Python muito bom UAU'
