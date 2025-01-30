@@ -14,6 +14,7 @@ while op==0:
         print("Opção inválida! Tente novamente.")
 
 print("Sexo: {}".format(sexo))
+
 """
 
 from Pacote1 import verifica

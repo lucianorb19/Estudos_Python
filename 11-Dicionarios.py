@@ -34,6 +34,11 @@ LAÇO FOR PARA DICIONÁRIO
 for chave,valor in dados.items():
     print(f"{chave}: {valor}") #MOSTRA A ESTRUTURA COMPLETA DE CADA ITEM DO DICIONÁRIO
 
+USAR MÉTODO get PARA ACESSAR VALORES DO DICIONÁRIO
+dicionario={"nome":"Luciano","idade":28,"sexo":"masculino",}
+a = dicionario.get("idade")
+#saída é 28
+
 ATRIBUIÇÃO DE UM DICIONÁRIO PARA OUTRA ESTRUTURA
 brasil=list()
 estado=dict()

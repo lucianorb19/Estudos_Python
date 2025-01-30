@@ -16,9 +16,13 @@ lista.remove(x) - apaga o elemento x da lista
 del lista[x] - apaga o item da posição x
 lista.pop(x) - apaga o item da posição x
 
+#ENCONTRAR NA LISTA
+lista.count(x) - conta quantas vezes o item de valor x aparece na lista
+
 #ORDENAR LISTA
 lista.sort()
 lista.sort(reverse=True) ordena na ordem reversa
+lista.reverse() - inverte a ordem da lista
 
 #MOSTRAR LISTA
 for x in lista:
@@ -37,9 +41,25 @@ b=a OQ ACONTECER EM b ACONTE EM a
 COPIAR LISTA
 a=[1,2,3]
 b=a[:] #b recebe uma cópia dos elementos de a
+
+#PARA QUALQUER ESTRUTURA DE REPETIÇÃO, O COMANDO continue PULA UMA ITERAÇÃO DO LAÇO
+#POR EXEMPLO, MOSTRAR TODOS OS NOMES DA LISTA, MAS PULAR CASO O NOME SEJA LUCIANO
+
 """
 
 from Pacote1 import verifica
+
+
+#------------------------------------
+print("DESAFIO - PULAR UM NOME NA LISTA")
+nomes = ["GUSTAVO","AMANDA","LUCIANO","CLEBER",]
+
+for nome in nomes:
+    if nome=="LUCIANO":
+        continue
+    print(nome)
+print()
+
 
 #------------------------------------
 print("DESAFIO - 5 VALORES NA LISTA")
