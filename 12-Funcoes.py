@@ -40,6 +40,13 @@ def dobra(lista):
 #NO CÓDIGO PRINCIPAL
 valores=[2, 4, 5, 6, 2, 1]
 dobra(valores)
+
+#TAMBÉM É POSSÍVEL DEFINIR DENTRO DE UMA FUNÇÃO O COMPORTAMENTO pass, UTILIZADO PARA CRIAR UMA FUNÇÃO QUE NÃO FAZ NADA POR SÍ SÓ, MAS QUE SERVE DE BASE PARA OUTRAS APLICAÇÕES
+
+def somar():
+    pass
+    
+    
 """
 from Pacote1 import verifica
 
